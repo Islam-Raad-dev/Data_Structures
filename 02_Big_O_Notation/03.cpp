@@ -10,7 +10,7 @@ int main()
     // O(log n) - Logarithmic Time Complexity
     cout << "O(log n) - Logarithmic Time Complexity:" << endl;
     for (int i = 1; i < n; i *= 2)
-    {
+    {                
         cout << i << " ";
     }
     cout << endl;
