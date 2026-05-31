@@ -14,7 +14,7 @@ int main()
     {
         cout << i << " ";
     }     
-    cout << endl;
+    cout << endl;              
 
     // O(n^2) - Quadratic Time Complexity
     cout << "O(n^2) - Quadratic Time Complexity:" << endl;
