@@ -19,6 +19,8 @@ int main()
         {
             cout << "(" << i << ", " << j << ") ";
         }
+
+        
         cout << endl;
     }
 
