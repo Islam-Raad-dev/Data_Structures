@@ -12,6 +12,7 @@ int main()
     // O(n log n) - Linearithmic Time Complexity
 
     cout << "O(n log n) - Linearithmic Time Complexity:" << endl;
+    
     for (int i = 0; i < n; i++)
     {
         for (int j = 1; j < n; j *= 2)
