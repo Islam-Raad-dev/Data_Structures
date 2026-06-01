@@ -23,5 +23,9 @@ char GetLastCharacter(string S1)
 int main()
 {
 
+    string S1 = "Hello World";
+
+    cout << GetLastCharacter(S1) << endl;
+
     return 0;
 }
