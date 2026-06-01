@@ -1,6 +1,6 @@
 /*
 
-
+Time Complexity: O(n).
 
 */
 
@@ -8,27 +8,20 @@
 
 using namespace std;
 
+char GetLastCharacter(string S1)
+{
+    int n = S1.length() - 1;
+
+    for(int i = 0; i < n; i++)
+    {
+       if(i == n)
+       {
+           return S1[n];
+       }
+    }
+}
 int main()
 {
-    int n;   
-
-    cout << "Enter the value of n: ";
-    cin >> n;
-
-    // O(n log n) - Linearithmic Time Complexity
-
-    cout << "O(n log n) - Linearithmic Time Complexity:" << endl;
-    
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 1; j < n; j *= 2)
-        {
-            cout << "(" << i << ", " << j << ") ";
-        }
-
-        
-        cout << endl;
-    }
 
     return 0;
 }
