@@ -8,16 +8,18 @@ Array and Matrix
 
 using namespace std;
 
-int main() {
+int main()
+{
     vector<vector<int>> matrix = {
         {1, 0, 1},
         {0, 1, 0},
-        {1, 0, 1}
-    };
+        {1, 0, 1}};
 
     // Print the matrix
-    for (const auto& row : matrix) {
-        for (const auto& element : row) {
+    for (const auto &row : matrix)
+    {
+        for (const auto &element : row)
+        {
             cout << element << " ";
         }
         cout << endl;
