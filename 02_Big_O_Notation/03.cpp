@@ -1,21 +1,32 @@
+/*
+
+Time Complexity: O(n). 
+
+*/
+
 #include <iostream>
+
 using namespace std;
 
+char GetLastCharacter(string S1)
+{
+    int n = S1.length() - 1;
+
+    for(int i = 0; i < n; i++)
+    {
+       if(i == n)
+       {
+           return S1[n];
+       }
+    }
+        return S1[n];
+}
 int main()
 {
-    int n;
 
-    cout << "Enter the value of n: ";
-    cin >> n;
+    string S1 = "Hello World";
 
-    // O(log n) - Logarithmic Time Complexity
-
-    cout << "O(log n) - Logarithmic Time Complexity:" << endl;
-    for (int i = 1; i < n; i *= 2)
-    {                
-        cout << i << " ";
-    }            
-    cout << endl;            
+    cout << GetLastCharacter(S1) << endl;
 
     return 0;
 }
