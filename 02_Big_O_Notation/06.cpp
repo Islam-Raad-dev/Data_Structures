@@ -1,6 +1,8 @@
 /*
 
-If Tow Alogrithms have the same time complexity, they will have the same Big O notation. For example, if both algorithms have a time complexity of O(n).
+If Tow Alogrithms have the same time complexity, they will have the same
+Big O notation. For example, if both algorithms have a time complexity of O
+(n).
 
 */
 #include <iostream>
