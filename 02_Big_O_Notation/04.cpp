@@ -19,6 +19,7 @@ char GetLastCharacter(string S1)
            return S1[n];
        }
     }
+        return S1[n];
 }
 int main()
 {
