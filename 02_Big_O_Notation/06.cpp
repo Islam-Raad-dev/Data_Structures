@@ -48,6 +48,5 @@ int main()
     cout << FindNumberAlgorhim1(arr1, 100) <<"\n";
     cout << FindNumberAlgorhim2(arr1, 100) << "\n";
 
-    system("pause>0");
     return 0;
 }
