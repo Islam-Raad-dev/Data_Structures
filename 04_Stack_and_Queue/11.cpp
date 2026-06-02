@@ -21,7 +21,7 @@ int main()
     cout << "\nBack: " << MyQueue.back() << endl;
 
     cout << "\nMyQueue = ";
-    
+
     while (!MyQueue.empty())
     {
         cout << MyQueue.front() << " ";
