@@ -12,7 +12,7 @@ class Node
 
 public:
 
-    int data;
+    int value;
     Node * next;
 
 };
@@ -26,6 +26,16 @@ int main()
     Node * Node2;
     Node * Node3;
 
-    
+    Node1 = new Node();
+    Node2 = new Node();
+    Node3 = new Node();
+
+    Node1->value = 1;
+    Node2->value = 2;
+    Node3->value = 3;
+
+    Node1->next = Node2;
+    Node2->next = Node3;
+    Node3->next = NULL;
     return 0;
 }
