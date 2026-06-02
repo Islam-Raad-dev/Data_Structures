@@ -1,6 +1,6 @@
 /*
 
-Stack
+Stack                 
 
 */
 #include <iostream>
@@ -20,7 +20,7 @@ int main()
     cout << "Stack size: " << stNumbers.size() << endl;
 
     cout << "Numbers are:\n";
-    
+
     while (!stNumbers.empty())
     {
         cout << stNumbers.top() << "\n";
