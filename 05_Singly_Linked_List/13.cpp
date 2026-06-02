@@ -20,7 +20,7 @@ public:
 int main()
 {
 
-    Node * head;
+    Node * Head;
 
     Node * Node1;
     Node * Node2;
@@ -37,5 +37,14 @@ int main()
     Node1->next = Node2;
     Node2->next = Node3;
     Node3->next = NULL;
+
+    Head = Node1;
+
+    while (Head != NULL)
+    {
+        cout << Head->value << endl;
+        Head = Head->next;
+    }
+
     return 0;
 }
