@@ -9,10 +9,8 @@ using namespace std;
 
 int main()
 {
-    // Queue container declaration
-    queue<int> MyQueue;
+    queue < int >  MyQueue;
 
-    // pushing elements into first stack
     MyQueue.push(10);
     MyQueue.push(20);
     MyQueue.push(30);
@@ -23,6 +21,7 @@ int main()
     cout << "\nBack: " << MyQueue.back() << endl;
 
     cout << "\nMyQueue = ";
+    
     while (!MyQueue.empty())
     {
         cout << MyQueue.front() << " ";
