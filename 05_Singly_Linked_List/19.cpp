@@ -81,6 +81,20 @@ void InsertAfter(Node *prev_Node, int value)
     prev_Node->next = newNode;
 }
 
+Node *DeleteFirstNode(Node *Head)
+{
+    if (Head == NULL)
+    {
+        return Head;
+    }
+
+    Node *temp = Head;
+    Head = Head->next;
+    delete temp;
+
+    return Head;
+}
+
 int main()
 {
     Node *Head = NULL;
@@ -88,8 +102,13 @@ int main()
     InsertAtEnd(Head, 1);
     InsertAtEnd(Head, 2);
     InsertAtEnd(Head, 3);
-    InsertAtBeginning(Head, 0);
+    InsertAtEnd(Head, 4);
+    InsertAtEnd(Head, 5);
+    InsertAtEnd(Head, 6);
+    PrintList(Head);
 
+    DeleteFirstNode(Head);
+    cout << "List after deletion: " << endl;
     PrintList(Head);
 
     return 0;
