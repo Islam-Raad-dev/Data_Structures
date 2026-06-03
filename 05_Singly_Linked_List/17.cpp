@@ -24,6 +24,26 @@ void InsertAtBeginning(Node *&Head, int value)
     Head = newNode;
 }
 
+void InsertAtEnd(Node *&Head, int value)
+{
+    Node *newNode = new Node();
+    newNode->value = value;
+    newNode->next = NULL;
+
+    if (Head == NULL)
+    {
+        Head = newNode;
+        return;
+    }
+
+    Node *temp = Head;
+    while (temp->next != NULL)
+    {
+        temp = temp->next;
+    }
+    temp->next = newNode;
+}
+
 void PrintList(Node *Head)
 {
     while (Head != NULL)
