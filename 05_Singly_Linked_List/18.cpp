@@ -82,6 +82,7 @@ void InsertAfter(Node *prev_Node, int value)
     prev_Node->next = newNode;
 }
 
+Node
 int main()
 {
     Node *Head = NULL;
