@@ -123,6 +123,9 @@ int main()
     InsertAtEnd(Head, 1);
     InsertAtEnd(Head, 2);
     InsertAtEnd(Head, 3);
+    InsertAtEnd(Head, 4);
+    InsertAtEnd(Head, 5);
+    
     PrintList(Head);
 
     DeleteNode(Head, 2);
