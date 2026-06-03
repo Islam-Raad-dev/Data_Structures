@@ -132,3 +132,20 @@ Node *DeleteFirstNode(Node *Head)
 }
 
 int main()
+{
+    Node *Head = NULL;
+
+    InsertAtEnd(Head, 1);
+    InsertAtEnd(Head, 2);
+    InsertAtEnd(Head, 3);
+    InsertAtEnd(Head, 4);
+    InsertAtEnd(Head, 5);
+    InsertAtEnd(Head, 6);
+    PrintList(Head);
+
+    DeleteFirstNode(Head);
+    cout << "List after deletion: " << endl;
+    PrintList(Head);
+
+    return 0;
+}
