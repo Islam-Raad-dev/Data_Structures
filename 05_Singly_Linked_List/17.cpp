@@ -26,22 +26,22 @@ void InsertAtBeginning(Node *&Head, int value)
 
 void InsertAtEnd(Node *&Head, int value)
 {
-    Node *newNode = new Node();
-    newNode->value = value;
-    newNode->next = NULL;
+    Node *NewNode = new Node();
+    NewNode->value = value;
+    NewNode->next = NULL;
 
     if (Head == NULL)
     {
-        Head = newNode;
+        Head = NewNode;
         return;
     }
 
-    Node *temp = Head;
-    while (temp->next != NULL)
+    Node *LastNode = Head;
+    while (LastNode->next != NULL)
     {
-        temp = temp->next;
+        LastNode = LastNode->next;
     }
-    temp->next = newNode;
+    LastNode->next = NewNode;
 }
 
 void PrintList(Node *Head)
