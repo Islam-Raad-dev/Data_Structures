@@ -31,7 +31,7 @@ int main()
     Node3 = new Node();
 
     Node1->value = 1;
-    Node2->value = 2;
+    Node2->value = 2;                              
     Node3->value = 3;
 
     Node1->next = Node2;
