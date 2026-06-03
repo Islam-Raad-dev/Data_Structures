@@ -1,6 +1,6 @@
 /*
 
-Linked List
+Singly Linked List
 
 */
 #include <iostream>
