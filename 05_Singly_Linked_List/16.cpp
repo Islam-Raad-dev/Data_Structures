@@ -29,9 +29,10 @@ void PrintList(Node *Head)
 {
     while (Head != NULL)
     {
-        cout << Head->value << endl;
+        cout << Head->value << " ";
         Head = Head->next;
     }
+    cout << endl;
 }
 
 Node * Find(Node *Head, int value){
@@ -46,9 +47,9 @@ Node * Find(Node *Head, int value){
     return NULL;
 }
 
-void InsertAfter(Node *N, int value)
+void InsertAfter(Node *prev_Node, int value)
 {
-    if(N == NULL)
+    if(prev_Node == NULL)
     {
         cout << "Node is NULL" << endl;
         return;
@@ -56,9 +57,9 @@ void InsertAfter(Node *N, int value)
 
     Node *newNode = new Node();
     newNode->value = value;
-    newNode->next = N->next;
+    newNode->next = prev_Node->next;
 
-    N->next = newNode;
+    prev_Node->next = newNode;
 }
 
 int main()
@@ -74,8 +75,9 @@ int main()
 
     Node * N1 = Find(Head, 2);
 
-    InsertAfter(N1, 5);
+    InsertAfter(N1, 500);
 
+    cout << "\nList after insertion: \n\n";
     PrintList(Head);
 
     return 0;
