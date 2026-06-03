@@ -134,27 +134,29 @@ Node *DeleteFirstNode(Node *Head)
 Node *DeleteLastNode(Node *Head)
 {
 
-    Node * Current = Head, Prev = Head;
-    
+    Node * Current = Head, * Prev = Head;
+
     if (Head == NULL)
     {
-        return Head;
-    }
-
-    if (Head->next == NULL)
-    {
-        delete Head;
         return NULL;
     }
 
-    Node *current = Head;
-    while (current->next->next != NULL)
+    if (Current->next == NULL)
     {
-        current = current->next;
+        Head = NULL;
+        delete Current;
+        return NULL;
     }
 
-    delete current->next;
-    current->next = NULL;
+    while (Current != NULL && Current->next != NULL)
+    {
+        Prev = Current;
+        Current = Current->next;
+    }
+
+    delete Current;
+    Prev->next = NULL;
+    Current->next = NULL;
 
     return Head;
 }
