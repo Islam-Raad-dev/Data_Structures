@@ -34,8 +34,7 @@ void PrintList(Node *Head)
     }
 }
 
-Node * Find(Node *Head, int value)
-{
+Node * Find(Node *Head, int value){
     while (Head != NULL)
     {
         if (Head->value == value)
