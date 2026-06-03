@@ -117,14 +117,15 @@ Node *DeleteNode(Node *Head, int value)
 
 Node *DeleteFirstNode(Node *Head)
 {
+    Node *Current = Head;
+
     if (Head == NULL)
     {
         return Head;
     }
 
-    Node *temp = Head;
-    Head = Head->next;
-    delete temp;
+    Head = Current->next;
+    delete Current;
 
     return Head;
 }
