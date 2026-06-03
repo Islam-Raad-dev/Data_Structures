@@ -22,9 +22,9 @@ int main()
 
     Node * Head;
 
-    Node * Node1;
-    Node * Node2;
-    Node * Node3;
+    Node * Node1 = NULL;
+    Node * Node2 = NULL;
+    Node * Node3 = NULL;
 
     Node1 = new Node();
     Node2 = new Node();
