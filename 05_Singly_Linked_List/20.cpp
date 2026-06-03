@@ -154,9 +154,9 @@ Node *DeleteLastNode(Node *Head)
         Current = Current->next;
     }
 
-    delete Current;
+    
     Prev->next = NULL;
-    Current->next = NULL;
+    delete Current;
 
     return Head;
 }
