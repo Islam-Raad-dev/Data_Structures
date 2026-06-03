@@ -1,7 +1,7 @@
 /*
 
 Singly Linked List: Delete Node
-  
+                
 */
 
 #include <iostream>
@@ -84,35 +84,33 @@ void InsertAfter(Node *prev_Node, int value)
 
 Node *DeleteNode(Node *Head, int value)
 {
-    Node * Current = Head, *Prev = NULL;
-
     if (Head == NULL)
     {
-        return;
+        return Head;
     }
 
     if (Head->value == value)
     {
-        
+        Node *temp = Head;
         Head = Head->next;
-        delete Prev;
+        delete temp;
         return Head;
     }
 
-    while (Current->next != NULL && Current->next->value != value)
+    Node *current = Head;
+    while (current->next != NULL && current->next->value != value)
     {
-        Prev = Current;
-        Current = Current->next;
+        current = current->next;
     }
 
-    if (Current->next == NULL)
+    if (current->next == NULL)
     {
         cout << "Value not found in the list." << endl;
         return Head;
     }
 
-    Node *temp = Current->next;
-    Current->next = Current->next->next;
+    Node *temp = current->next;
+    current->next = current->next->next;
     delete temp;
 
     return Head;
