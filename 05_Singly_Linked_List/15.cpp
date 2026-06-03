@@ -34,6 +34,19 @@ void PrintList(Node *Head)
     }
 }
 
+Node* Find(Node *Head, int value)
+{
+    while (Head != NULL)
+    {
+        if (Head->value == value)
+        {
+            return Head;
+        }
+        Head = Head->next;
+    }
+    return NULL;
+}
+
 int main()
 {
     Node * Head = NULL;
@@ -45,6 +58,16 @@ int main()
 
     PrintList(Head);
 
+    Node * N1 = Find(Head, 2);
+
+    if(N1 != NULL)
+    {
+        cout << "Found: " << N1->value << endl;
+    }
+    else
+    {
+        cout << "Not Found" << endl;
+    }
 
     return 0;
 }
