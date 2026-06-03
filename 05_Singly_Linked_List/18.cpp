@@ -84,33 +84,35 @@ void InsertAfter(Node *prev_Node, int value)
 
 Node *DeleteNode(Node *Head, int value)
 {
+    Node * Current = Head, *Prev = NULL;
+
     if (Head == NULL)
     {
-        return NULL;
+        return;
     }
 
     if (Head->value == value)
     {
-        Node *temp = Head;
+        
         Head = Head->next;
-        delete temp;
+        delete Prev;
         return Head;
     }
 
-    Node *current = Head;
-    while (current->next != NULL && current->next->value != value)
+    while (Current->next != NULL && Current->next->value != value)
     {
-        current = current->next;
+        Prev = Current;
+        Current = Current->next;
     }
 
-    if (current->next == NULL)
+    if (Current->next == NULL)
     {
         cout << "Value not found in the list." << endl;
         return Head;
     }
 
-    Node *temp = current->next;
-    current->next = current->next->next;
+    Node *temp = Current->next;
+    Current->next = Current->next->next;
     delete temp;
 
     return Head;
@@ -125,7 +127,7 @@ int main()
     InsertAtEnd(Head, 3);
     InsertAtEnd(Head, 4);
     InsertAtEnd(Head, 5);
-    
+
     PrintList(Head);
 
     DeleteNode(Head, 2);
