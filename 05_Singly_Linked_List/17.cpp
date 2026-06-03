@@ -86,18 +86,11 @@ int main()
 {
     Node *Head = NULL;
 
-    InsertAtBeginning(Head, 1);
-    InsertAtBeginning(Head, 2);
-    InsertAtBeginning(Head, 3);
-    InsertAtBeginning(Head, 4);
+    InsertAtEnd(Head, 1);
+    InsertAtEnd(Head, 2);
+    InsertAtEnd(Head, 3);
+    InsertAtBeginning(Head, 0);
 
-    PrintList(Head);
-
-    Node *N1 = Find(Head, 2);
-
-    InsertAfter(N1, 500);
-
-    cout << "\nList after insertion: \n\n";
     PrintList(Head);
 
     return 0;
