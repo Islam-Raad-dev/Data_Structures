@@ -16,8 +16,12 @@ public:
 void InsertAtBeginning(Node *&Head, int value)
 {
     Node *newNode = new Node();
+
+
     newNode->value = value;
     newNode->next = Head;
+
+    
     Head = newNode;
 }
 
