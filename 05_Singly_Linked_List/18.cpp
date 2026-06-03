@@ -3,7 +3,7 @@
 Singly Linked List: Delete Node
                 
 */
-
+                  
 #include <iostream>
 using namespace std;
 
