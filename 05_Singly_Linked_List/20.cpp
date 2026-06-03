@@ -133,6 +133,9 @@ Node *DeleteFirstNode(Node *Head)
 
 Node *DeleteLastNode(Node *Head)
 {
+
+    Node * Current = Head, Prev = Head;
+    
     if (Head == NULL)
     {
         return Head;
