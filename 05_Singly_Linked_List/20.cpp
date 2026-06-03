@@ -131,6 +131,31 @@ Node *DeleteFirstNode(Node *Head)
     return Head;
 }
 
+Node *DeleteLastNode(Node *Head)
+{
+    if (Head == NULL)
+    {
+        return Head;
+    }
+
+    if (Head->next == NULL)
+    {
+        delete Head;
+        return NULL;
+    }
+
+    Node *current = Head;
+    while (current->next->next != NULL)
+    {
+        current = current->next;
+    }
+
+    delete current->next;
+    current->next = NULL;
+
+    return Head;
+}
+
 int main()
 {
     Node *Head = NULL;
@@ -143,7 +168,7 @@ int main()
     InsertAtEnd(Head, 6);
     PrintList(Head);
 
-    DeleteFirstNode(Head);
+    DeleteLastNode(Head);
     cout << "List after deletion: " << endl;
     PrintList(Head);
 
