@@ -1,7 +1,7 @@
 /*
 
 Singly Linked List: Delete Node
-
+  
 */
 
 #include <iostream>
