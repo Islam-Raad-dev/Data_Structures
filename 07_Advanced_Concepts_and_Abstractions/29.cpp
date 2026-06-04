@@ -1,6 +1,6 @@
 /*
 
-Map 
+Map
 
 */
 #include <iostream>
@@ -9,25 +9,27 @@ Map
 
 using namespace std;
 
-int main() {
-    map<string, int> myMap;
+int main()
+{
+    map<string, int> StudentMarks;
 
-    // Insert key-value pairs into the map
-    myMap["apple"] = 1;
-    myMap["banana"] = 2;
-    myMap["orange"] = 3;
+    StudentMarks["Isalm"] = 85;
+    StudentMarks["Ahmad"] = 90;
+    StudentMarks["Omar"] = 78;
 
-    // Access values using keys
-    cout << "Value for 'apple': " << myMap["apple"] << endl;
-    cout << "Value for 'banana': " << myMap["banana"] << endl;
-    cout << "Value for 'orange': " << myMap["orange"] << endl;
-
-    // Check if a key exists
-    if (myMap.find("grape") != myMap.end()) {
-        cout << "Value for 'grape': " << myMap["grape"] << endl;
-    } else {
-        cout << "'grape' not found in the map." << endl;
+    for (const auto &pair : StudentMarks)
+    {
+        cout << pair.first << ": " << pair.second << endl;
     }
 
+    string StudentName = "Ahmad";
+    if (StudentMarks.find(StudentName) != StudentMarks.end())
+    {
+        cout << StudentName << "'s marks: " << StudentMarks[StudentName] << endl;
+    }
+    else
+    {
+        cout << StudentName << " not found in the map." << endl;
+    }
     return 0;
 }
