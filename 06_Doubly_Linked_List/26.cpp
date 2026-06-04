@@ -96,7 +96,18 @@ Node * DeleteNode(Node *&Head, Node *&NodeToDelete)
         Head = NodeToDelete->Next;
     }
 
-    
+    if (NodeToDelete->Next != NULL)
+    {
+        NodeToDelete->Next->Prev = NodeToDelete->Prev;
+    }
+
+    if (NodeToDelete->Prev != NULL)
+    {
+        NodeToDelete->Prev->Next = NodeToDelete->Next;
+    }
+
+    delete NodeToDelete;
+    return Head;
 }
 
 void PrintList(Node *Head)
