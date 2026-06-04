@@ -84,29 +84,19 @@ void InsertAtEnd(Node *&Head, int Value)
     }
 }
 
-Node * DeleteNode(Node *&Head, Node *Current)
+Node * DeleteNode(Node *&Head, Node *&NodeToDelete)
 {
-    if (Current == NULL)
+    if (Head == NULL || NodeToDelete == NULL)
     {
         return NULL;
     }
 
-    if (Current->Prev != NULL)
+    if (Head == NodeToDelete)
     {
-        Current->Prev->Next = Current->Next;
-    }
-    else
-    {
-        Head = Current->Next;
+        Head = NodeToDelete->Next;
     }
 
-    if (Current->Next != NULL)
-    {
-        Current->Next->Prev = Current->Prev;
-    }
-
-    delete Current;
-    return NULL;
+    
 }
 
 void PrintList(Node *Head)
