@@ -37,12 +37,11 @@ Node* Find(Node *Head, int Value)
     {
         if (Head->Value == Value)
         {
-            cout << "Node found with value: " << Value << endl;
-            return;
+            return Head;
         }
         Head = Head->Next;
     }
-    cout << "Node not found with value: " << Value << endl;
+    return NULL;
 }
 
 void InsertAfter(Node *&Current, int Value)
