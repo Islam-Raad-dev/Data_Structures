@@ -1,6 +1,12 @@
 /*
 
-Map
+Map :
+
+ A map is a collection of key-value pairs where each key is unique  and 
+ maps to a specific value. In C++, the map data structure is implemented 
+ using the std::map class from the Standard Template Library (STL). It 
+ allows you to store and retrieve values based on their associated keys 
+ efficiently.
 
 */
 #include <iostream>
