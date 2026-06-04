@@ -45,7 +45,7 @@ void Find(Node *Head, int Value)
     cout << "Node not found with value: " << Value << endl;
 }
 
-void InsertAfter()
+void InsertAfter(Node *&head, int Value)
 {
 
 }
@@ -72,8 +72,10 @@ int main()
     InsertAtBeginning(Head, 1);
     PrintList(Head);
 
-    Find(Head, 3);
-    Find(Head, 6);
+    InsertAfter();
+    InsertAfter();
+    InsertAfter();
+    PrintList(Head);
 
     return 0;
 }
