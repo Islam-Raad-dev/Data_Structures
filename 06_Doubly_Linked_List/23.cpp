@@ -9,7 +9,7 @@ using namespace std;
 
 class Node
 {
-               
+
 public:
     int Value;
     Node *Next;
@@ -18,23 +18,35 @@ public:
 
 void InsertAtBeginning(Node *&Head, int Value)
 {
-    Node * NewNode = new Node();
+    Node *NewNode = new Node();
     NewNode->Value = Value;
     NewNode->Next = Head;
     NewNode->Prev = NULL;
-    
-    if(Head != NULL)
+
+    if (Head != NULL)
     {
         Head->Prev = NewNode;
     }
 
     Head = NewNode;
-
 }
 
+void Find(Node *Head, int Value)
+{
+    while (Head != NULL)
+    {
+        if (Head->Value == Value)
+        {
+            cout << "Node found with value: " << Value << endl;
+            return;
+        }
+        Head = Head->Next;
+    }
+    cout << "Node not found with value: " << Value << endl;
+}
 void PrintList(Node *Head)
 {
-    while(Head != NULL)
+    while (Head != NULL)
     {
         cout << Head->Value << " ";
         Head = Head->Next;
@@ -50,6 +62,9 @@ int main()
     InsertAtBeginning(Head, 3);
     InsertAtBeginning(Head, 2);
     InsertAtBeginning(Head, 1);
+
+    Find(Head, 3);
+    Find(Head, 6);
 
     PrintList(Head);
 
