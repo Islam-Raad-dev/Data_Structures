@@ -47,25 +47,7 @@ Node* Find(Node *Head, int Value)
 
 void InsertAfter(Node *&head, int Value)
 {
-    Node *NewNode = new Node();
-    NewNode->Value = Value;
-    NewNode->Next = NULL;
-    NewNode->Prev = NULL;
-
-    if (head == NULL)
-    {
-        head = NewNode;
-        return;
-    }
-
-    Node *Current = head;
-    while (Current->Next != NULL)
-    {
-        Current = Current->Next;
-    }
-
-    Current->Next = NewNode;
-    NewNode->Prev = Current;
+    
 
 }
 
@@ -85,13 +67,16 @@ int main()
     Node *Head = NULL;
 
     InsertAtBeginning(Head, 5);
-    InsertAtBeginning(Head, 4);
     InsertAtBeginning(Head, 3);
     InsertAtBeginning(Head, 2);
     InsertAtBeginning(Head, 1);
     PrintList(Head);
 
     Node * N1 = Find(Head, 3);
+
+    InsertAfter(N1, 4);
+
+    cout << "After Inserting: " << endl;
     PrintList(Head);
 
     return 0;
