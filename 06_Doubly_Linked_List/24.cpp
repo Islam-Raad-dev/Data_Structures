@@ -3,11 +3,6 @@
 Double Linked List: Insert After Node
 
 */
-/*
-
-Double Linked List: Find Node
-
-*/
 
 #include <iostream>
 using namespace std;
