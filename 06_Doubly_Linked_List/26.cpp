@@ -84,7 +84,7 @@ void InsertAtEnd(Node *&Head, int Value)
     }
 }
 
-Node * DeleteNode(Node *&Head, Node *&NodeToDelete)
+Node *DeleteNode(Node *&Head, Node *&NodeToDelete)
 {
     if (Head == NULL || NodeToDelete == NULL)
     {
@@ -134,7 +134,7 @@ int main()
     cout << "Before Deletion: ";
     PrintList(Head);
 
-    Node * N1 = Find(Head, 3);
+    Node *N1 = Find(Head, 3);
 
     DeleteNode(Head, N1);
     cout << " After Deletion: ";
