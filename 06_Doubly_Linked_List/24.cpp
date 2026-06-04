@@ -31,7 +31,7 @@ void InsertAtBeginning(Node *&Head, int Value)
     Head = NewNode;
 }
 
-void Find(Node *Head, int Value)
+Node* Find(Node *Head, int Value)
 {
     while (Head != NULL)
     {
@@ -47,6 +47,25 @@ void Find(Node *Head, int Value)
 
 void InsertAfter(Node *&head, int Value)
 {
+    Node *NewNode = new Node();
+    NewNode->Value = Value;
+    NewNode->Next = NULL;
+    NewNode->Prev = NULL;
+
+    if (head == NULL)
+    {
+        head = NewNode;
+        return;
+    }
+
+    Node *Current = head;
+    while (Current->Next != NULL)
+    {
+        Current = Current->Next;
+    }
+
+    Current->Next = NewNode;
+    NewNode->Prev = Current;
 
 }
 
@@ -72,9 +91,7 @@ int main()
     InsertAtBeginning(Head, 1);
     PrintList(Head);
 
-    InsertAfter();
-    InsertAfter();
-    InsertAfter();
+    Node * N1 = Find(Head, 3);
     PrintList(Head);
 
     return 0;
