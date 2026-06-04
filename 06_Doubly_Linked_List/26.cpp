@@ -84,7 +84,30 @@ void InsertAtEnd(Node *&Head, int Value)
     }
 }
 
-No
+Node * DeleteNode(Node *&Head, Node *Current)
+{
+    if (Current == NULL)
+    {
+        return NULL;
+    }
+
+    if (Current->Prev != NULL)
+    {
+        Current->Prev->Next = Current->Next;
+    }
+    else
+    {
+        Head = Current->Next;
+    }
+
+    if (Current->Next != NULL)
+    {
+        Current->Next->Prev = Current->Prev;
+    }
+
+    delete Current;
+    return NULL;
+}
 
 void PrintList(Node *Head)
 {
@@ -106,10 +129,14 @@ int main()
     InsertAtBeginning(Head, 3);
     InsertAtBeginning(Head, 2);
     InsertAtBeginning(Head, 1);
+
+    cout << "Before Deletion: ";
     PrintList(Head);
 
-    InsertAtEnd(Head, 6);
-    cout << "After Inserting at End: " << endl;
+    Node * N1 = Find(Head, 3);
+
+    DeleteNode(Head, N1);
+    cout << " After Deletion: ";
     PrintList(Head);
 
     return 0;
