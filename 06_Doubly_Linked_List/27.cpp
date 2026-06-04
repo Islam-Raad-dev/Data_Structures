@@ -1,7 +1,7 @@
 /*
 
 Double Linked List: Delete First Node
-
+             
 */
 
 #include <iostream>
