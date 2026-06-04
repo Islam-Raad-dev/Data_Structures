@@ -45,9 +45,19 @@ Node* Find(Node *Head, int Value)
     cout << "Node not found with value: " << Value << endl;
 }
 
-void InsertAfter(Node *&head, int Value)
+void InsertAfter(Node *&Current, int Value)
 {
-    
+    Node * NewNode = new Node();
+    NewNode->Value = Value;
+    NewNode->Next = Current->Next;
+    NewNode->Prev = Current;
+
+    if(Current->Next != NULL)
+    {
+        Current->Next->Prev = NewNode;
+    }
+
+    Current->Next = NewNode;
 
 }
 
