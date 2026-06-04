@@ -110,6 +110,23 @@ Node *DeleteNode(Node *&Head, Node *&NodeToDelete)
     return NULL;
 }
 
+void DeleteFirstNode(Node *&Head)
+{
+    if (Head == NULL)
+    {
+        return;
+    }
+
+    Node *Temp = Head;
+    Head = Head->Next;
+
+    if (Head != NULL)
+    {
+        Head->Prev = NULL;
+    }
+
+    delete Temp;
+}
 
 void PrintList(Node *Head)
 {
@@ -135,9 +152,7 @@ int main()
     cout << "Before Deletion: ";
     PrintList(Head);
 
-    Node *N1 = Find(Head, 3);
-
-    DeleteNode(Head, N1);
+    DeleteFirstNode(Head);
     cout << " After Deletion: ";
     PrintList(Head);
 
