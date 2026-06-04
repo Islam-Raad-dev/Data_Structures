@@ -107,7 +107,7 @@ Node *DeleteNode(Node *&Head, Node *&NodeToDelete)
     }
 
     delete NodeToDelete;
-    return Head;
+    return NULL;
 }
 
 void PrintList(Node *Head)
