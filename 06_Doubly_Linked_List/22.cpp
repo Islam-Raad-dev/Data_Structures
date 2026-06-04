@@ -17,6 +17,18 @@ public:
 
 void InsertAtBeginning(Node *&Head, int Value)
 {
+    Node * NewNode = new Node();
+    NewNode->Value = Value;
+    NewNode->Next = Head;
+    NewNode->Prev = NULL;
+    
+    if(Head != NULL)
+    {
+        Head->Prev = NewNode;
+    }
+
+    Head = NewNode;
+
 }
 
 void PrintList(Node *Head)
@@ -32,8 +44,10 @@ int main()
 {
     Node *Head = NULL;
 
-    InsertAtBeginning(Head, 1);
-    InsertAtBeginning(Head, 1);
+    InsertAtBeginning(Head, 5);
+    InsertAtBeginning(Head, 4);
+    InsertAtBeginning(Head, 3);
+    InsertAtBeginning(Head, 2);
     InsertAtBeginning(Head, 1);
 
     PrintList(Head);
