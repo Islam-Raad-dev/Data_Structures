@@ -45,6 +45,11 @@ void Find(Node *Head, int Value)
     cout << "Node not found with value: " << Value << endl;
 }
 
+void InsertAfter()
+{
+
+}
+
 void PrintList(Node *Head)
 {
     while (Head != NULL)
