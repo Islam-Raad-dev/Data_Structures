@@ -44,6 +44,7 @@ void Find(Node *Head, int Value)
     }
     cout << "Node not found with value: " << Value << endl;
 }
+
 void PrintList(Node *Head)
 {
     while (Head != NULL)
@@ -51,6 +52,8 @@ void PrintList(Node *Head)
         cout << Head->Value << " ";
         Head = Head->Next;
     }
+
+    cout << endl;
 }
 
 int main()
@@ -62,11 +65,12 @@ int main()
     InsertAtBeginning(Head, 3);
     InsertAtBeginning(Head, 2);
     InsertAtBeginning(Head, 1);
+    PrintList(Head);
 
     Find(Head, 3);
     Find(Head, 6);
 
-    PrintList(Head);
+    
 
     return 0;
 }
